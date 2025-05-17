@@ -1,0 +1,304 @@
+.container {
+  width: 100%;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+  
+  /* Hero Section */
+  .hero {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 90vh;
+  background: url('/coins-imges/freepik__adjust__25332.png') ;
+  text-align: left;
+  padding: 100px;
+  width: 100%;
+  background-size: cover; /* ensures it fills entire section */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.mobileHero {
+  flex-direction: column;
+  text-align: center;
+  overflow-y: auto;
+  max-height: 100vh;
+  padding: 30px;
+  background: url('/coins-imges/top-view-business-concept-bitcoin-cryptocurrency-money-dark-black-slate-table-background_315337-3773.jpg') ;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 60px 20px;
+}
+
+.heroContent {
+  flex: 2;
+  padding-right: 40px;
+  margin-top: 0;
+}
+
+.mobileHero .heroContent {
+  padding-right: 0;
+  margin-top: 80px;
+}
+
+.heroTitle {
+  font-size: 3rem;
+  color: #FFCC00;
+  font-weight: 600;
+}
+
+.heroDescription {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 20px 0;
+  max-width: 600px;
+}
+
+.mobileHero .heroDescription {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.heroButton {
+  background-color: #FFCC00;
+  color: #1F1F1F;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.heroButton:hover {
+  background-color: #e5b800;
+}
+
+.heroImageContainer {
+  flex: 2;
+  max-width: 500px;
+  margin-left: 0;
+  border-radius: 0;
+}
+
+.heroImage {
+  max-width: 100%;
+  height: auto;
+  filter: drop-shadow(9px 9px 27px black);
+  border: 1px solid black;
+  border-radius: 50%;
+  background: linear-gradient(170deg, #fbfacf, #63e0f9);
+  overflow: visible;
+}
+
+
+
+  /* Stats Section */
+  .stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px 20px;
+    color: #fff;
+    background-color: #252525;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  .statBox {
+    text-align: center;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #1F1F1F;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    min-width: 270px;
+  }
+  
+  .statNumber {
+    font-size: 2.5rem;
+    color: #FFCC00;
+  }
+  
+  /* How It Works Section */
+  .howItWorks {
+    padding: 60px 20px;
+    background-color: #1F1F1F;
+    color: #fff;
+    width: 100%;
+  }
+  
+  .sectionTitle {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #FFCC00;
+    margin-bottom: 60px;
+  }
+  
+  .stepsContainer {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .step {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 60px;
+    gap: 30px;
+  }
+  
+  .stepLeft {
+    flex-direction: row;
+  }
+  
+  .stepRight {
+    flex-direction: row-reverse;
+  }
+  
+  .stepNumber {
+    background-color: #FFCC00;
+    color: #1F1F1F;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  
+  .stepContent {
+    max-width: 600px;
+  }
+  
+  .stepContent h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  /* Features Section */
+  .features {
+    padding: 60px 20px;
+    background-color: #121212;
+    color: #E0F7FA;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .featuresGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .featureCard {
+    background-color: #1F1F1F;
+    border-radius: 12px;
+    padding: 30px 20px;
+    box-shadow: 0 4px 20px rgba(0, 255, 255, 0.1);
+  }
+  
+  .featureIcon {
+    margin-bottom: 20px;
+  }
+  
+  .featureCard h3 {
+    font-size: 1.3rem;
+    color: #FFCC00;
+    margin-bottom: 10px;
+  }
+  
+  /* FAQ Section */
+  .faq {
+    padding: 60px 20px;
+    background-color: #252525;
+    color: #fff;
+    width: 100%;
+  }
+  
+  .faqItem {
+    margin-bottom: 20px;
+    background-color: #1F1F1F;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+  
+  .faqItem h3 {
+    font-size: 1.3rem;
+    color: #FFCC00;
+  }
+  
+  .faqItem p {
+    margin-top: 10px;
+    font-size: 1rem;
+  }
+
+
+  /* Coin Row Styling */
+.coinRow {
+  display: flex;
+  gap: 16px;
+  margin: 20px 0;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.coinIcon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.coinIcon:hover {
+  transform: scale(1.2);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .coinRow {
+    gap: 12px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+
+  .coinIcon {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .coinRow {
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .coinIcon {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.coinIcon:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 6px #ffd700);
+}

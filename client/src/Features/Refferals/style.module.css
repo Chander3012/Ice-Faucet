@@ -1,0 +1,192 @@
+/* Main container */
+.referralsContainer {
+  padding: 1.5rem;
+  margin: 1rem auto;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  animation: fadeIn 0.5s ease-in-out;
+  max-width: 95%;
+}
+
+
+@media (min-width: 640px) {
+  .referralsContainer {
+    max-width: 600px;
+    padding: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .referralsContainer {
+    max-width: 100%;
+    padding: 2.5rem;
+  }
+}
+
+/* Header styling */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.icon {
+  font-size: 2rem;
+  color: #4f46e5;
+}
+
+@media (min-width: 640px) {
+  .icon {
+    font-size: 2.5rem;
+  }
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+@media (min-width: 640px) {
+  .title {
+    font-size: 2rem;
+  }
+}
+
+/* Description text */
+.description {
+  font-size: 1rem;
+  color: #4b5563;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+@media (min-width: 640px) {
+  .description {
+    font-size: 1.1rem;
+  }
+}
+
+/* Referral Box */
+.referralBox {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+.referralBox h3 {
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+  color: #111827;
+}
+
+/* Referral Link Box */
+.linkBox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+@media (min-width: 480px) {
+  .linkBox {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.linkBox input {
+  flex: 1;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 1rem;
+  background-color: #f3f4f6;
+  color: #111827;
+  width: 100%;
+}
+
+.linkBox button {
+  background-color: #4f46e5;
+  color: white;
+  padding: 0.75rem 1.25rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+@media (min-width: 480px) {
+  .linkBox button {
+    width: auto;
+  }
+}
+
+.linkBox button:hover {
+  background-color: #4338ca;
+}
+
+/* Animation for fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* History Box */
+.historyBox {
+  margin-top: 2rem;
+  background: #f3f4f6;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.historyBox h3 {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: #111827;
+}
+
+/* Referral History List */
+.historyList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.historyItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+}
+
+.historyItem strong {
+  color: #1f2937;
+}
+
+.earnings {
+  font-weight: 600;
+  color: #4f46e5;
+}
+
+.noReferrals {
+  color: #6b7280;
+  font-size: 1rem;
+  padding: 1rem 0;
+}

@@ -1,0 +1,86 @@
+/* ===== Footer Styles ===== */
+
+/* Dashboard Footer */
+.dashboardFooter {
+    background-color: rgb(37, 37, 37);
+    color: #E0F7FA;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    height: 60px;
+  }
+  
+  /* Landing Page Footer */
+  .landingFooter {
+    background-color: #333333;
+    color: #E0F7FA;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .footerContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 0 20px;
+  }
+  
+  .footerSection {
+    flex: 1 1 250px;
+    text-align: left;
+    margin-bottom: 30px;
+  }
+  
+  .footerLogo {
+    font-size: 2.6rem;
+    font-weight: bold;
+    color: #FFCC00;
+    margin-bottom: 10px;
+  }
+  
+  .footerDescription {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .footerHeading {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #FFCC00;
+  }
+  
+  .footerList {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+  }
+  
+  .footerLink {
+    color: #E0F7FA;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footerLink:hover {
+    color: #00FFD1;
+  }
+  
+  .footerText {
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+  
+  .footerDivider {
+    border-color: rgba(0, 255, 255, 0.2);
+    margin: 20px 0;
+  }
+  
+  .copyright {
+    font-size: 1rem;
+    margin: 0;
+  }

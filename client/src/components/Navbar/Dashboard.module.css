@@ -1,0 +1,166 @@
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2a2a2a;
+  color: white;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  height: 60px;
+}
+
+.navbar .container-fluid {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+/* Logo section (Left side) */
+/* .navbar .logo {
+  width: 100%;
+  height: 30px;
+  object-fit: contain;
+} */
+
+.navbar .logo a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar .logo a:hover {
+  color: #d4d4d4;
+}
+
+/* Center section (Points) */
+.navbar-center {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.navbar .points-display {
+  font-size: 18px;
+  font-weight: bold;
+  color: #FFCC00;
+  padding: 5px 10px;
+  background-color: #333;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.navbar .points-display:hover {
+  background-color: #555;
+}
+
+/* Right section (User Welcome and Logout) */
+.navbarRight {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.navbarRight span {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.navbar .logoutButton {
+  color: #FFCC00;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    padding: 12px;
+  }
+
+  .navbar-center {
+    flex-grow: 0;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+  }
+
+  .navbar .logo {
+    font-size: 14px;
+  }
+
+  .navbar .points-display {
+    font-size: 16px;
+  }
+}
+
+.navLink {
+  color: #FFFFFF !important;
+  margin-right: 1rem;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.navLink:hover {
+  color: #FFCC00 !important;
+  transform: translateY(-2px);
+}
+
+.activeLink {
+  color: #FFCC00 !important;
+  font-weight: 500;
+}
+
+.navbar .logo {
+  height: 40px;
+  width: auto;
+  margin-right: 8px;
+}
+
+@media (max-width: 768px) {
+  .navbar .logo {
+    height: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar .logo {
+    height: 24px;
+  }
+}
+
+.versionBadge {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #00ffe5;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 4px 10px;
+  border-radius: 12px;
+  box-shadow: 0 0 6px rgba(0, 255, 255, 0.4);
+  animation: fadeIn 1s ease-in-out;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .versionBadge {
+    font-size: 0.9rem;
+    padding: 2px 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .versionBadge {
+    font-size: 0.75rem;
+    padding: 2px 6px;
+  }
+}
+
+/* Optional fade-in animation */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-3px); }
+  100% { opacity: 1; transform: translateY(0); }
+}

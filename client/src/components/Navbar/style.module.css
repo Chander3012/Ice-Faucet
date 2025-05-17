@@ -1,0 +1,238 @@
+/* ===== Navbar Styles ===== */
+.navbar {
+  background-color: #333333;
+  padding: 0.8rem 1rem;
+  width: 85%;
+  border-radius: 15px;
+  position: fixed;
+  top: 12px;
+  box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.8);
+  }
+  
+  .container {
+    padding: 0;
+  }
+  
+  .brand {
+    color: #FFFFFF;
+    font-weight: bold;
+    margin-right: 2rem;
+  }
+  
+  /* If using CSS Modules (styles.toggler) */
+/* Toggler button styles */
+.toggler {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  transition: all 0.3s ease;
+}
+
+.toggler:focus {
+  outline: none;
+  /* Light blue glow for focus state */
+  box-shadow: 0 0 0 2px rgba(100, 200, 255, 0.5);
+}
+
+/* White lines for dark background */
+.togglerIcon {
+  display: block;
+  width: 1.5rem;
+  height: 2px;
+  background: #ffffff; /* White color */
+  position: relative;
+  transition: all 0.3s ease;
+  /* Optional subtle shadow for extra visibility */
+  box-shadow: 0 0 2px rgba(255, 255, 255, 0.2);
+}
+
+.togglerIcon::before,
+.togglerIcon::after {
+  content: '';
+  display: block;
+  width: 1.5rem;
+  height: 2px;
+  background: #ffffff; /* White color */
+  position: absolute;
+  left: 0;
+  transition: all 0.3s ease;
+  /* Optional subtle shadow for extra visibility */
+  box-shadow: 0 0 2px rgba(255, 255, 255, 0.2);
+}
+
+.togglerIcon::before {
+  transform: translateY(-0.5rem);
+}
+
+.togglerIcon::after {
+  transform: translateY(0.5rem);
+}
+
+/* Animation when clicked/expanded - white X on black background */
+.toggler[aria-expanded="true"] .togglerIcon {
+  background: transparent;
+  box-shadow: none;
+}
+
+.toggler[aria-expanded="true"] .togglerIcon::before {
+  transform: rotate(45deg);
+  background: #ffffff; /* Keep white when transformed to X */
+}
+
+.toggler[aria-expanded="true"] .togglerIcon::after {
+  transform: rotate(-45deg);
+  background: #ffffff; /* Keep white when transformed to X */
+}
+
+/* Optional hover effect */
+.toggler:hover .togglerIcon,
+.toggler:hover .togglerIcon::before,
+.toggler:hover .togglerIcon::after {
+  background: #f0f0f0; /* Slightly off-white on hover */
+}
+  
+  .nav {
+    align-items: center;
+  }
+  
+  .navItem {
+    margin-right: 0.5rem;
+  }
+  
+  .navLink {
+    color: #FFFFFF !important;
+    margin-right: 1rem;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+
+  }
+  
+  .navLink:hover {
+    color: #FFCC00 !important;
+    transform: translateY(-2px);
+  }
+  
+  .activeLink {
+    color: #FFCC00 !important;
+    font-weight: 500;
+  }
+  
+  .buttonGroup {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .primaryButton {
+    background-color: #FFCC00;
+    color: #000000;
+    border: none;
+    margin-right: 10px;
+    padding: 0.5rem 1.5rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  
+  .primaryButton:hover {
+    background-color: #e5b800;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(255, 204, 0, 0.3);
+  }
+  
+  .secondaryButton {
+    background-color: #FFFFFF;
+    color: #000000;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  
+  .secondaryButton:hover {
+    background-color: #e6e6e6;
+    transform: translateY(-2px);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 992px) {
+    .nav {
+      margin-bottom: 1rem;
+    
+    }
+    
+    .buttonGroup {
+      margin-top: 1rem;
+      justify-content: flex-start;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .navbar {
+      
+      padding: 0 0.5rem;
+   
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .navbar {
+      
+      padding: 10px 1.3rem;
+    }
+  }
+
+  .logo {
+    height: 40px;
+    width: auto;
+    margin-right: 8px;
+  }
+  
+  @media (max-width: 768px) {
+    .logo {
+      height: 30px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .logo {
+      height: 24px;
+    }
+  }
+  
+  .versionBadge {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #00ffe5;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 4px 10px;
+    border-radius: 12px;
+    box-shadow: 0 0 6px rgba(0, 255, 255, 0.4);
+    animation: fadeIn 1s ease-in-out;
+    white-space: nowrap;
+  }
+  
+  @media (max-width: 768px) {
+    .versionBadge {
+      font-size: 0.9rem;
+      padding: 2px 8px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .versionBadge {
+      font-size: 0.75rem;
+      padding: 2px 6px;
+    }
+  }
+  
+  /* Optional fade-in animation */
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-3px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }

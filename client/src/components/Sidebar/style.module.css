@@ -1,0 +1,132 @@
+/* ===== Sidebar Styles ===== */
+.toggleBar {
+    background: #111;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 14px 20px;
+  }
+  
+  .toggleIcon {
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .toggleText {
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  
+  .toggleText:hover {
+    color: #606262;
+  }
+  
+  .sidebar {
+    background: #222;
+    color: #fff;
+    height: auto;
+    padding-top: 15px;
+    flex-shrink: 0;
+    z-index: 1000; /* make sure it's above outlet */
+    transform: translateX(-100%); /* hide it by default */
+    transition: transform 0.3s ease;
+  }
+  
+  .sidebar.open {
+    width: 200px;
+    min-width: 180px;
+    transform: translateX(0);
+  }
+  
+  .sidebar.closed {
+    width: 60px;
+    min-width: 60px;
+  }
+  
+  .menuItem {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 24px;
+    margin: 8px 0;
+    color: #ccc;
+    text-decoration: none;
+    transition: all 0.3s;
+    justify-content: flex-start;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 8px;
+    
+  }
+  
+  .sidebar.closed .menuItem {
+    justify-content: center;
+    gap: 0;
+  }
+  
+  .menuItem:hover, .menuItem.active {
+    background: #333;
+    color: #fff;
+    transform: scale(1.02);
+  }
+  
+  .dropdownIcon {
+    margin-left: auto;
+  }
+  
+  .dropdownContainer {
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    max-height: 0;
+  }
+  
+  .dropdownContainer.visible {
+    max-height: 500px;
+  }
+  
+  .subMenu {
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .subMenuItem {
+    padding: 10px 24px;
+    margin: 4px 0;
+    color: #ccc;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    font-size: 15px;
+    border-radius: 6px;
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+  
+  .sidebar.closed .subMenuItem {
+    display: none;
+  }
+  
+  .subMenuItem:hover, .subMenuItem.activeSubItem {
+    background: #2e2e2e;
+    color: #fff;
+  }
+  
+  /* Icon Colors */
+  .shortlinkIcon { color: #00bcd4; }
+  .easyShortlinkIcon { color: #28fb4b; } 
+  .hardShortlinkIcon{ color: #ff0707; }
+  .gamesIcon { color: #4caf50; }
+  .breakIceIcon { color: #07cdff; }
+  .ptcIcon { color: #ffc107; }
+  .depositIcon { color: #069515; }
+  .withdrawIcon { color: #ff0766; }
+  .adIcon{ color: #ff0728; }
+ 

@@ -1,0 +1,14 @@
+{
+  "name": "Ice Faucet",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "concurrently \"npm run client\" \"npm run server\"",
+    "client": "npm run dev --prefix client",
+    "server": "npm run dev --prefix backend"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "concurrently": "^6.0.0",
+    "hardhat": "^2.23.0"
+  }
+}

@@ -1,0 +1,236 @@
+.withdrawContainer {
+  width: 100%;
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  background: linear-gradient(to right, #f7f9fc, #eef2f7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #1f2937;
+  text-align: center;
+}
+
+.tabButtons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.tabButton {
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+.tabButton:hover:not(:disabled) {
+  background-color: #e0e7ff;
+  border-color: #a5b4fc;
+  color: #1e3a8a;
+}
+
+.active {
+  background-color: #3b82f6;
+  border-color: #3b82f6;
+  color: #ffffff;
+  cursor: default;
+}
+
+.tabContent {
+  width: 100%;
+  max-width: 800px;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.tabText {
+  font-size: 1.1rem;
+  color: #4b5563;
+}
+
+/* Giftcard Layout */
+.giftcardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+.giftcardCard {
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 260px;
+}
+
+.giftcardCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+.giftcardLogo {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.giftcardName {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+.giftcardValue {
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+}
+
+.pointsRequired {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  /* Make sure this text is always readable */
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 600;
+}
+
+/* Redeem Button */
+.redeemBtn {
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #000000;
+  font-weight: 600;
+  transition: background 0.2s ease;
+  cursor: pointer;
+  user-select: none;
+}
+
+.redeemBtn:hover:enabled {
+  background-color: #f1f1f1;
+}
+
+.redeemBtn:disabled {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: rgba(0, 0, 0, 0.5);
+  cursor: not-allowed;
+}
+
+/* Responsive Tweaks */
+@media screen and (max-width: 768px) {
+  .tabButton {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
+  .tabContent {
+    padding: 1.5rem;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+}
+
+
+.pointsForm {
+  margin-bottom: 2rem;
+  max-width: 400px;
+  width: 100%;
+  /* margin-left: auto; */
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.pointsLabel {
+  font-weight: 600;
+  color: #1f2937;
+  text-align: left;
+}
+
+.pointsInput {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1.1rem;
+  background-color: #f9fafb;
+  color: #111827;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+/* Redemption History */
+.historySection {
+  /* max-width: 600px; */
+  width: 100%;
+  margin: 1.5rem auto 2rem auto;
+  padding: 1rem 1.5rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.historyTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #3b82f6;
+  padding-bottom: 0.25rem;
+}
+
+.noHistoryText {
+  font-size: 1rem;
+  color: #6b7280;
+  font-style: italic;
+}
+
+.historyList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.historyItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 1rem;
+  color: #374151;
+}
+
+.historyDate {
+  color: #9ca3af;
+  font-size: 0.9rem;
+}
